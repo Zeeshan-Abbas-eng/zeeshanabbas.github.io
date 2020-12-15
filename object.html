@@ -1,0 +1,133 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title></title>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="k.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body style="position: relative;">
+<div class="container " style="width: 100%; top: 50%; left: 50%;
+transform: translate(-50%,-50%); position: absolute;">
+	<div class="card text-center text-uppercase">
+		<div class=" card-header bg-info text-white font-weight-bold">BMI Calculeter</div>
+		<div class="card-body">
+			<form class="w-50 m-auto" onsubmit="return false">
+				<div class="form-group ">
+					<label>weight</label>
+					<input type="text" name="" required placeholder="WEIGHT" id="weight" class="form-control ">
+				</div>
+            <div class="form-group">
+					<label>height</label>
+					<input type="text" name="" placeholder="HEIGHT" required="" id="height" class="form-control">
+				</div> 
+                
+                <div class="form-group">
+					
+					<input type="text" name="" id="val" class="form-control">
+					<label>value</label>
+				</div> 
+				<button onclick="myfun()" class="btn btn-primary w-40">submit</button>
+
+
+			</form>
+		</div>
+		<div class="card-footer bg-info text-white font-weight-bold">A healthu BMI ranges is 19 to 25</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function myfun(){
+	var h=document.getElementById("height").value;
+	var w=document.getElementById("weight").value;
+	h=h*12;
+	h=h*0.025;
+	var x= w/(Math.pow(h,2));
+	var x= Math.round(x);
+	document.getElementById("val").value=x;
+}
+</script>
+
+
+
+
+
+
+
+
+
+<!-- <header>
+	<div class="card w-50 m-auto text-center text-uppercase">
+	<div class="card-header">luck calculater</div>
+	<div class="card-body">
+		<form class="form-inline ">
+			<div class="form-group m-auto">
+				<input type="text" name="" class="form-control text-uppercase text-center" placeholder="month" id="name">
+			</div>
+            <div > <span class="ml-4 mr-4">+</span></div>
+			<div class="form-group m-auto" >
+				<input type="text" name="" class="form-control text-uppercase text-center" placeholder="year" id="lname">
+			</div>
+		</form>
+		<div class="w-75 m-auto">
+			<button onclick="myfun()" class="btn btn-success w-50">click</button>
+		</div>
+		<br>
+		<div>
+			<input type="text" class="text-uppercase form-control text-center w-25 m-auto" name="" id="more" placeholder="result">
+		</div>
+
+	</div>
+	<div class="card-footer">best of luck :)</div>
+
+	</div>
+</header> -->
+
+<script type="text/javascript">
+	// function myfun(){
+ //    var name=document.getElementById('name').value;
+ //     var lname=document.getElementById('lname').value;
+ //    if (name=="") {
+ //    	alert("please enter the date ");
+ //    } else if(name.length <=1){
+ //    	alert("enter teh correct date");
+ //    }else if(isNaN(name)){
+ //      alert("only number allow");
+ //    }
+
+
+ //    else if (lname=="") {
+ //    	alert("please enter teh year ");
+ //    } else if(lname.length <=3){
+ //    	alert("enter the correct year");
+ //    }else if(isNaN(lname)){
+ //      alert("only number allow");
+ //    }else{
+ //          var a= Math.random()*100;
+	// 	a=Math.floor(a);
+	// 	document.getElementById('more').value=a+"%";
+ //    }
+
+
+
+		
+
+		
+	// }
+</script>
+
+</body>
+</html>
+
